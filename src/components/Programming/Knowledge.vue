@@ -3,14 +3,15 @@
     <ul>
       <li>
         <img
-          src="img/html.png"
+          src="../../assets/HTML5_Logo.svg"
+          title="HTML5 Logo by World Wide Web Consortium"
           alt="HTML5"
         />
       </li>
       <li>
         <img
-          src="img/css.png"
-          title="CSS3"
+          src="../../assets/CSS3_logo_and_wordmark.svg"
+          title="CSS3 - Rudloff / CC BY (https://creativecommons.org/licenses/by/3.0)"
           alt="CSS3"
         />
       </li>
@@ -20,7 +21,8 @@
           target="_blank"
         >
           <img
-            src="img/javascript.png"
+            src="../../assets/ts-logo-512.svg"
+            title="TypeScript"
             alt="TypeScript"
           />
         </a>
@@ -31,8 +33,9 @@
           target="_blank"
         >
           <img
-            src="img/angular.png"
+            src="../../assets/React-icon.svg"
             alt="React"
+            title="React - Facebook / Public domain"
           />
         </a>
       </li>
@@ -42,19 +45,9 @@
           target="_blank"
         >
           <img
-            src="img/npm.png"
+            src="../../assets/npm-logo-red.svg"
+            title="npm, Inc. / CC BY-SA 4.0"
             alt="npm"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://bower.io/"
-          target="_blank"
-        >
-          <img
-            src="img/bower.png"
-            alt="Bower"
           />
         </a>
       </li>
@@ -64,8 +57,9 @@
           target="_blank"
         >
           <img
-            src="img/gulp.png"
+            src="../../assets/webpack-icon.svg"
             alt="Webpack"
+            title="Webpack"
           />
         </a>
       </li>
@@ -75,7 +69,8 @@
           target="_blank"
         >
           <img
-            src="img/webstorm.png"
+            src="../../assets/icon-webstorm.svg"
+            title="Webstorm"
             alt="Webstorm"
           />
         </a>
@@ -112,6 +107,8 @@
         display: inline-block;
 
         img, svg {
+          width: 100px;
+          height: 100px;
           max-width: 100px;
           max-height: 100px;
         }
