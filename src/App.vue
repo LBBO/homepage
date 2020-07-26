@@ -17,11 +17,11 @@
 
 <script lang="ts">
   import Landingpage from './components/Landingpage.vue'
-  import Programming from './components/Programming.vue'
+  import Programming from './components/Programming/Programming.vue'
   import Photography from './components/Photography/Photography.vue'
   import Footer from './components/Footer.vue'
   import LanguageSwitch from './components/LanguageSwitch.vue'
-  import Navigation from './components/Navigation.vue'
+  import Navigation from './components/Navigation/Navigation.vue'
   import Background from './components/Background.vue'
 
   export default {

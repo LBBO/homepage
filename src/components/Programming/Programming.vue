@@ -3,46 +3,7 @@
     <div class="de">
       <h1>Ich kenne mich mit</h1>
 
-      <div class="knowledge">
-        <ul>
-          <li>
-            <img src="img/html.png" title="HTML5" />
-          </li>
-          <li>
-            <img src="img/css.png" title="CSS3" />
-          </li>
-          <li>
-            <a href="https://www.javascript.com/" target="_blank" title="JavaScript">
-              <img src="img/javascript.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://angularjs.org/" target="_blank" title="AngularJS">
-              <img src="img/angular.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.npmjs.com/" target="_blank" title="NPM">
-              <img src="img/npm.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://bower.io/" target="_blank" title="Bower">
-              <img src="img/bower.png" />
-            </a>
-          </li>
-          <li>
-            <a href="http://gulpjs.com/" target="_blank" title="Gulp">
-              <img src="img/gulp.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.jetbrains.com/webstorm/" target="_blank" title="Webstorm">
-              <img src="img/webstorm.png" />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <Knowledge />
 
       <h1>aus und habe damit folgende Projekte geschaffen</h1>
 
@@ -74,46 +35,7 @@
     <div class="en-us">
       <h1>I am familiar with</h1>
 
-      <div class="knowledge">
-        <ul>
-          <li>
-            <img src="img/html.png" title="HTML5" />
-          </li>
-          <li>
-            <img src="img/css.png" title="CSS3" />
-          </li>
-          <li>
-            <a href="https://www.javascript.com/" target="_blank" title="JavaScript">
-              <img src="img/javascript.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://angularjs.org/" target="_blank" title="AngularJS">
-              <img src="img/angular.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.npmjs.com/" target="_blank" title="NPM">
-              <img src="img/npm.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://bower.io/" target="_blank" title="Bower">
-              <img src="img/bower.png" />
-            </a>
-          </li>
-          <li>
-            <a href="http://gulpjs.com/" target="_blank" title="Gulp">
-              <img src="img/gulp.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.jetbrains.com/webstorm/" target="_blank" title="Webstorm">
-              <img src="img/webstorm.png" />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <Knowledge />
 
       <h1>and have created the following projects</h1>
 
@@ -145,47 +67,21 @@
 </template>
 
 <script lang="ts">
+  import Knowledge from './Knowledge.vue'
   export default {
     name: 'Programming',
+    components: { Knowledge },
   }
 </script>
 
 <style scoped lang="scss">
   #programming {
-    background: #EBEBEB url('../assets/code.png') no-repeat;
+    background: #EBEBEB url('../../assets/code.png') no-repeat;
     background-size: auto;
     color: #2B2B2B;
 
     h1 {
       text-align: center;
-    }
-
-    .knowledge {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        max-width: 800px;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-
-        li {
-          padding: 30px;
-          display: inline-block;
-
-          img, svg {
-            max-width: 100px;
-            max-height: 100px;
-          }
-        }
-      }
     }
 
     .projects {
@@ -306,21 +202,6 @@
         text-align: center;
       }
 
-      .knowledge {
-        ul {
-          max-width: 520px;
-
-          li {
-            padding: 30px;
-
-            img, svg {
-              max-width: 70px;
-              max-height: 70px;
-            }
-          }
-        }
-      }
-
       .projects {
         .project-carousel {
           width: 100%;
@@ -359,29 +240,6 @@
 
   @media screen and (max-width: 600px) {
     #programming {
-      .knowledge {
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          max-width: 220px;
-          display: flex;
-          flex-flow: row wrap;
-          align-items: center;
-          justify-content: center;
-
-          li {
-            padding: 30px;
-            display: inline-block;
-
-            img, svg {
-              max-width: 50px;
-              max-height: 50px;
-            }
-          }
-        }
-      }
-
       .projects {
         .project-carousel {
           max-width: 100%;
