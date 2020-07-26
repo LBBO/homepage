@@ -1,5 +1,5 @@
 <template>
-  <div class="footer page">
+  <div class="page" id="footer">
     <div class="de">
       <ul>
         <li><a href="https://twitter.com/LBBO_" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -40,7 +40,7 @@
 </script>
 
 <style scoped lang="scss">
-  .footer {
+  #footer {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/IMG_3247.jpg');
     background-size: cover;
 

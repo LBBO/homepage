@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-page page">
+  <div class="page" id="landing-page">
     <div class="de">
     <span class="name">
         Michael	Kuckuk
@@ -32,7 +32,7 @@
 </script>
 
 <style scoped lang="scss">
-  .landing-page {
+  #landing-page {
     justify-content: center;
     align-items: center;
 
@@ -65,7 +65,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    .landing-page {
+    #landing-page {
       max-width: 100%;
     }
   }

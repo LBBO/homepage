@@ -1,5 +1,5 @@
 <template>
-  <div class="programming page">
+  <div class="page" id="programming">
     <div class="de">
       <h1>Ich kenne mich mit</h1>
 
@@ -151,7 +151,7 @@
 </script>
 
 <style scoped lang="scss">
-  .programming {
+  #programming {
     background: #EBEBEB url('../assets/code.png') no-repeat;
     background-size: auto;
     color: #2B2B2B;
@@ -299,7 +299,7 @@
   }
 
   @media screen and (max-width: 1142px) { //the extra 42px get rid of some weird bug, that was just the simplest fix
-    .programming {
+    #programming {
       background: #EBEBEB;
 
       h1 {
@@ -358,7 +358,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    .programming {
+    #programming {
       .knowledge {
         ul {
           list-style: none;

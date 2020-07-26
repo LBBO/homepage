@@ -1,5 +1,5 @@
 <template>
-  <div class="photography page">
+  <div class="page" id="photography">
     <div class="de">
       <div>
         <div class="intro">
@@ -29,7 +29,7 @@
 </script>
 
 <style scoped lang="scss">
-  .photography {
+  #photography {
     background-color: #BFBFBF;
 
     > div > div {
@@ -124,7 +124,7 @@
   }
 
   @media screen and (max-width: 1142px) { //the extra 42px get rid of some weird bug, that was just the simplest fix
-    .photography {
+    #photography {
       > div > div {
         .photoOverview {
           width: 80%;
@@ -141,7 +141,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    .photography {
+    #photography {
       > div > div {
         .photoOverview {
           width: 70%;

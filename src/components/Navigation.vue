@@ -9,11 +9,13 @@
     </div>
   </nav>
 </template>
+
 <script lang="ts">
   export default {
     name: 'Navigation',
   }
 </script>
+
 <style scoped lang="scss">
   nav {
     position: fixed;
@@ -23,13 +25,13 @@
     justify-content: flex-end;
     right: 20px;
     height: 100%;
+    z-index: 100;
 
     div {
       display: flex;
       flex-direction: column;
 
       a {
-        z-index: 100;
         cursor: pointer;
         color: #FFFFFF;
         display: block;
@@ -47,6 +49,12 @@
           transition: all .25s ease;
         }
 
+        &:hover, &.active {
+          span {
+            border: 2px solid #CCCCCC;
+            background: #505050;
+          }
+        }
       }
     }
   }
