@@ -1,15 +1,107 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <!--  <img alt="Vue logo" src="./assets/logo.png" />-->
+  <!--  <HelloWorld msg="Hello Vue 3.0 + Vite" />-->
+  <Background />
+
+  <LanguageSwitch />
+
+  <Navigation />
+
+  <div class="container">
+    <Landingpage />
+    <Programming />
+    <Photography />
+    <Footer />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+  import Landingpage from './components/Landingpage.vue'
+  import Programming from './components/Programming.vue'
+  import Photography from './components/Photography.vue'
+  import Footer from './components/Footer.vue'
+  import LanguageSwitch from './components/LanguageSwitch.vue'
+  import Navigation from './components/Navigation.vue'
+  import Background from './components/Background.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      Background,
+      Navigation,
+      LanguageSwitch,
+      Footer,
+      Photography,
+      Programming,
+      Landingpage,
+    },
   }
-}
 </script>
+
+<style lang="scss">
+  .en-us {
+    /* TODO: remove this line when language switcher works! */
+    display: none;
+  }
+
+  html {
+    height: 100%;
+    min-height: 100%;
+
+    &[lang="de"] .en-us {
+      max-height: 0;
+      display: none;
+    }
+
+    &[lang="en-us"] .de {
+      display: none !important;
+      max-height: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      min-height: 100%;
+      display: flex;
+      font-family: Roboto, sans-serif;
+    }
+  }
+</style>
+
+<style scoped lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  .container {
+    min-height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    .page {
+      min-height: calc(100vh - 40px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      & > * {
+        max-width: calc(100% - 56px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1142px) { //the extra 42px get rid of some weird bug, that was just the simplest fix
+    .container {
+      .page {
+        & > *, &:not(:nth-child(1)) li {
+          max-width: 100%;
+        }
+
+        &:nth-child(1) {
+          max-width: calc(100% - 56px);
+        }
+      }
+    }
+  }
+</style>
