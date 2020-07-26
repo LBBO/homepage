@@ -4,7 +4,7 @@
       <ul>
         <li><a href="https://twitter.com/LBBO_" target="_blank"><i class="fab fa-twitter"></i></a></li>
         <li><a href="https://github.com/LBBO" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a href="{{email}}"><i class="far fa-envelope"></i></a></li>
+        <li><a :href="email"><i class="far fa-envelope"></i></a></li>
       </ul>
     </div>
 
@@ -41,7 +41,6 @@
 
 <style scoped lang="scss">
   .footer {
-    //background-color: #717171;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/IMG_3247.jpg');
     background-size: cover;
 
@@ -87,7 +86,7 @@
 
             .fa-github {
               color: #171515;
-              background-color: #FFF;
+              background-color: #FFFFFF;
               border-radius: 500px;
             }
 

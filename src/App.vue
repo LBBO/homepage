@@ -41,7 +41,7 @@
 <style lang="scss">
   .en-us {
     /* TODO: remove this line when language switcher works! */
-    display: none;
+    display: none !important;
   }
 
   html {
