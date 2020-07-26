@@ -18,7 +18,7 @@
 <script lang="ts">
   import Landingpage from './components/Landingpage.vue'
   import Programming from './components/Programming.vue'
-  import Photography from './components/Photography.vue'
+  import Photography from './components/Photography/Photography.vue'
   import Footer from './components/Footer.vue'
   import LanguageSwitch from './components/LanguageSwitch.vue'
   import Navigation from './components/Navigation.vue'
@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss">
-  .en-us {
+  .de {
     /* TODO: remove this line when language switcher works! */
     display: none !important;
   }
