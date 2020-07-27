@@ -1,22 +1,15 @@
 <template>
   <div class="page" id="photography">
-    <div class="de">
-      <div>
-        <div class="intro">
-          <h1>Außerdem beschäftige ich mich sehr gerne mit der Fotografie</h1>
-        </div>
-        <PhotoOverview />
+    <div>
+      <div class="intro de">
+        <h1>Außerdem beschäftige ich mich sehr gerne mit der Fotografie</h1>
       </div>
-    </div>
 
-    <div class="en-us">
-      <div>
-        <div class="intro">
-          <h1>Another interest of mine is photography</h1>
-        </div>
-
-        <PhotoOverview />
+      <div class="intro en-us">
+        <h1>Another interest of mine is photography</h1>
       </div>
+
+      <PhotoOverview />
     </div>
   </div>
 </template>
@@ -34,7 +27,7 @@
   #photography {
     background-color: #BFBFBF;
 
-    > div > div {
+    > div {
       min-height: 100%;
       display: flex;
       flex-direction: column;

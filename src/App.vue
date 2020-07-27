@@ -41,8 +41,8 @@
     watch: {
       lang: (lang: string) => {
         localStorage.setItem('usedLanguage', lang)
-      }
-    }
+      },
+    },
   }
 </script>
 
@@ -51,14 +51,37 @@
     height: 100%;
     min-height: 100%;
 
-    [lang="de"] .en-us {
-      max-height: 0;
-      display: none;
+    @mixin visible {
+      max-height: 100vh;
+      transition: max-height .5s ease-in .5s, padding .5s ease-in .5s;
+      overflow: hidden;
     }
 
-    [lang="en-us"] .de {
-      display: none !important;
+    @mixin invisible {
       max-height: 0;
+      padding: 0 !important;
+      transition: max-height .5s ease-out, padding .5s ease-out;
+      overflow: hidden;
+    }
+
+    [lang="en-us"] {
+      .en-us {
+        @include visible
+      }
+
+      .de {
+        @include invisible
+      }
+    }
+
+    [lang="de"] {
+      .de {
+        @include visible
+      }
+
+      .en-us {
+        @include invisible
+      }
     }
 
     body {

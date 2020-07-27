@@ -32,18 +32,6 @@
 
 </script>
 
-<style lang="scss">
-  [lang="de"] .en-us {
-    max-height: 0;
-    display: none;
-  }
-
-  [lang="en-us"] .de {
-    display: none;
-    max-height: 0;
-  }
-</style>
-
 <style scoped lang="scss">
   .language-switch {
     position: absolute;
