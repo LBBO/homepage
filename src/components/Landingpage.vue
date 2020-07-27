@@ -57,7 +57,7 @@
 
           &:not(:nth-child(1)):before {
             content: "\2022";
-            margin-right: .2em;
+            margin: 0 .2em;
           }
         }
       }
