@@ -1,18 +1,10 @@
 <template>
   <div class="page" id="footer">
-    <div class="de">
+    <div>
       <ul>
         <li><a href="https://twitter.com/LBBO_" target="_blank"><i class="fab fa-twitter"></i></a></li>
         <li><a href="https://github.com/LBBO" target="_blank"><i class="fab fa-github"></i></a></li>
         <li><a :href="email"><i class="far fa-envelope"></i></a></li>
-      </ul>
-    </div>
-
-    <div class="en-us">
-      <ul>
-        <li><a href="https://twitter.com/LBBO_" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://github.com/LBBO" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a class="emailLink"><i class="far fa-envelope"></i></a></li>
       </ul>
     </div>
 

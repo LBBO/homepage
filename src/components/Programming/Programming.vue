@@ -1,43 +1,13 @@
 <template>
   <div class="page" id="programming">
-    <div class="de">
-      <h1>Ich kenne mich mit</h1>
+    <div>
+      <h1 class="de">Ich kenne mich mit</h1>
+      <h1 class="en-us">I am familiar with</h1>
 
       <Knowledge />
 
-      <h1>aus und habe damit folgende Projekte geschaffen</h1>
-
-      <div class="projects">
-        <div class="project-carousel">
-          <header>
-            <h2>
-              <span class="year-switcher prev-year">&#9664;</span>
-              <span class="title">
-                        <span class="year"></span>
-                        <aside class="counter"></aside>
-                    </span>
-              <span class="year-switcher next-year">&#9654;</span>
-            </h2>
-          </header>
-          <a href="#" target="_blank">
-            <div class="screenshots">
-              <span class="project-switcher prev-project">&#9664;</span>
-              <img src="" />
-              <span class="project-switcher next-project">&#9654;</span>
-            </div>
-            <div class="description">
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="en-us">
-      <h1>I am familiar with</h1>
-
-      <Knowledge />
-
-      <h1>and have created the following projects</h1>
+      <h1 class="de">aus und habe damit folgende Projekte geschaffen</h1>
+      <h1 class="en-us">and have created the following projects</h1>
 
       <div class="projects">
         <div class="project-carousel">
@@ -68,6 +38,7 @@
 
 <script lang="ts">
   import Knowledge from './Knowledge.vue'
+
   export default {
     name: 'Programming',
     components: { Knowledge },
