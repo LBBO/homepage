@@ -15,7 +15,7 @@
             <h2>
               <span class="year-switcher prev-year">&#9664;</span>
               <span class="title">
-                        <span class="year"></span>
+                        <span class="year">{{currentYear}}</span>
                         <aside class="counter"></aside>
                     </span>
               <span class="year-switcher next-year">&#9654;</span>
@@ -24,11 +24,10 @@
           <a href="#" target="_blank">
             <div class="screenshots">
               <span class="project-switcher prev-project">&#9664;</span>
-              <img src="" />
+              <img :src="project.screenshotUrl" />
               <span class="project-switcher next-project">&#9654;</span>
             </div>
-            <div class="description">
-            </div>
+            <div :class="`description ${lang}`" v-html="project.descriptionHtml[lang]" />
           </a>
         </div>
       </div>
@@ -38,12 +37,43 @@
 
 <script lang="ts">
   import Knowledge from './Knowledge.vue'
+  import projectsByYear from './projects.json'
 
   export default {
     name: 'Programming',
     components: { Knowledge },
+    props: {
+      lang: String,
+    },
+    data: () => {
+      const currentYearsProjects = projectsByYear[3]
+      const currentYear = currentYearsProjects.year
+      return {
+        currentYear,
+        project: currentYearsProjects.projects[0],
+      }
+    },
   }
 </script>
+
+<style lang="scss">
+  #programming {
+    .projects {
+      .project-carousel {
+        & > a {
+          .description {
+            a {
+              font-weight: bold;
+              color: inherit;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+</style>
 
 <style scoped lang="scss">
   #programming {
@@ -155,10 +185,6 @@
 
           .description {
             padding: 20px;
-
-            a {
-              font-weight: bold;
-            }
           }
         }
       }

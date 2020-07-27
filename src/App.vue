@@ -7,7 +7,7 @@
 
   <div class="container" :lang="lang">
     <Landingpage />
-    <Programming />
+    <Programming :lang="lang" />
     <Photography />
     <Footer />
   </div>

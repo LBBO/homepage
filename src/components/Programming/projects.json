@@ -115,7 +115,7 @@
     "projects": [
       {
         "url": "./ultimate",
-        "screenshotUrl": "resizeImg.php?filename=ultimateTicTacToeScreenshot.png&min-width=700",
+        "screenshotUrl": "src/assets/ultimateTicTacToeScreenshot.png",
         "descriptionHtml": {
           "de": "Nach langer Zeit kommt wieder ein Spiel: Ultimate Tic Tac Toe. Mein erstes Projekt mit React und das erste in der Liste, das <a href=\"https://github.com/LBBO/tic_tac_toe/tree/ultimate_tic_tac_toe\" target=\"_blank\">auf GitHub</a> zu finden ist.",
           "en-us": "After quite a while there is finally a new game: ultimate tic tac toe! This is my first project with React and the first project in this list that can be found <a href=\"https://github.com/LBBO/tic_tac_toe/tree/ultimate_tic_tac_toe\" target=\"_blank\">on GitHub</a>!"
