@@ -3,7 +3,9 @@
     <input
       type="checkbox"
       id="language"
-      checked
+      v-bind:checked="isChecked"
+      @input="$emit('input', $event?.target?.checked ? 'de' : 'en-us')"
+      @input.stop="stopPropagation"
     />
     <label for="language"></label>
   </div>
@@ -11,9 +13,36 @@
 
 <script lang="ts">
   export default {
-    name: "LanguageSwitch",
+    name: 'LanguageSwitch',
+    props: {
+      value: String,
+    },
+    computed: {
+      isChecked: function (): boolean {
+        return this.$props.value === 'de'
+      },
+      lang: function (): 'de' | 'en-us' {
+        return this.checked ? 'de' : 'en-us'
+      }
+    },
+    methods: {
+      stopPropagation: (event: Event) => event.stopPropagation(),
+    },
   }
+
 </script>
+
+<style lang="scss">
+  [lang="de"] .en-us {
+    max-height: 0;
+    display: none;
+  }
+
+  [lang="en-us"] .de {
+    display: none;
+    max-height: 0;
+  }
+</style>
 
 <style scoped lang="scss">
   .language-switch {

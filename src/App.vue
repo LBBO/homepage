@@ -1,13 +1,11 @@
 <template>
-  <!--  <img alt="Vue logo" src="./assets/logo.png" />-->
-  <!--  <HelloWorld msg="Hello Vue 3.0 + Vite" />-->
   <Background />
 
-  <LanguageSwitch />
+  <LanguageSwitch :value="lang" @input="lang = $event" />
 
   <Navigation />
 
-  <div class="container">
+  <div class="container" :lang="lang">
     <Landingpage />
     <Programming />
     <Photography />
@@ -35,25 +33,30 @@
       Programming,
       Landingpage,
     },
+    data: () => (
+      {
+        lang: localStorage.getItem('usedLanguage') ?? 'de',
+      }
+    ),
+    watch: {
+      lang: (lang: string) => {
+        localStorage.setItem('usedLanguage', lang)
+      }
+    }
   }
 </script>
 
 <style lang="scss">
-  .de {
-    /* TODO: remove this line when language switcher works! */
-    display: none !important;
-  }
-
   html {
     height: 100%;
     min-height: 100%;
 
-    &[lang="de"] .en-us {
+    [lang="de"] .en-us {
       max-height: 0;
       display: none;
     }
 
-    &[lang="en-us"] .de {
+    [lang="en-us"] .de {
       display: none !important;
       max-height: 0;
     }
