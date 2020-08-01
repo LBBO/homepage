@@ -88,6 +88,7 @@
       },
       changeProject: function (delta: number, evt: Event) {
         evt.stopPropagation()
+        evt.preventDefault()
         clearSelection()
 
         const nextProjectIndex = this.currentProjectIndex + delta
