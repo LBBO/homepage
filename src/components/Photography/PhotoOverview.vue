@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts">
-  import { clearSelection } from '../../util'
+  import pictureFileNames from './pictureFileNames.json'
 
   export default {
     name: 'PhotoOverview',
@@ -49,10 +49,7 @@
       {
         showOverlay: false,
         currentImageIndex: NaN,
-        pictureFileNames: [
-          'IMG_0571-2.jpg', 'IMG_0961.jpg', 'IMG_1360.jpg', 'IMG_1551.jpg', 'IMG_1556.jpg', 'IMG_1650-1.jpg',
-          'IMG_2255.jpg', 'IMG_2566.jpg', 'IMG_2889.jpg',
-        ],
+        pictureFileNames,
       }
     ),
     computed: {
