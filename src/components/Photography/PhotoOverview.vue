@@ -7,7 +7,7 @@
     >
       <div
         class="child"
-        :style="`background-image: url(src/assets/previews/${picture})`"
+        :style="`background-image: url(_assets/previews/${picture})`"
       />
     </div>
   </div>
@@ -25,7 +25,7 @@
     </div>
     <div
       class="img"
-      :style="`background-image: url(src/assets/${currentImage})`"
+      :style="`background-image: url(_assets/${currentImage})`"
     />
     <div
       class="img-switcher next"

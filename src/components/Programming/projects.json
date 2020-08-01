@@ -4,7 +4,7 @@
     "projects": [
       {
         "url": "./game.php",
-        "screenshotUrl": "src/assets/zahlenratenScreenshot.png",
+        "screenshotUrl": "_assets/zahlenratenScreenshot.png",
         "descriptionHtml": {
           "de": "Ein kleines Zahlenratespiel. Man hat sechs Versuche, eine Zahl zwischen 1 und 100 zu erraten und bekommt nach jedem Zug die Information, ob man zu hoch oder zu niedrig lag.",
           "en-us": "A little game for guessing numbers. You have six tries to guess an number between 1 and 100. After every guess you are told whether you guessed too high or too low."
@@ -12,7 +12,7 @@
       },
       {
         "url": "./space",
-        "screenshotUrl": "src/assets/spaceinvadersScreenshot.png",
+        "screenshotUrl": "_assets/spaceinvadersScreenshot.png",
         "descriptionHtml": {
           "de": "Meine kleine Version von Spaceinvaders.",
           "en-us": "My little version of Spaceinvaders."
@@ -20,7 +20,7 @@
       },
       {
         "url": "./stundenplaner",
-        "screenshotUrl": "src/assets/stundenplanerScreenshot.png",
+        "screenshotUrl": "_assets/stundenplanerScreenshot.png",
         "descriptionHtml": {
           "de": "Ein Werkzeug, um Stundenpläne zu erstellen und zu bearbeiten.",
           "en-us": "A tool for creating schedules for school"
@@ -28,7 +28,7 @@
       },
       {
         "url": "./Sani",
-        "screenshotUrl": "src/assets/saniV1Screenshot.png",
+        "screenshotUrl": "_assets/saniV1Screenshot.png",
         "descriptionHtml": {
           "de": "Hier wird der Schulsanitätsdienst des Neuen Gymnasium Bochum (NGB) organisiert. Diese Applikation ist in der Version nicht mehr verfügbar, mittlwerweile befindet sich unter der URL die zweite Version des Projekts.",
           "en-us": "An application for organising the first aid group at my school <i>[deprecated]</i>"
@@ -36,7 +36,7 @@
       },
       {
         "url": "./chat",
-        "screenshotUrl": "src/assets/chatScreenshot.png",
+        "screenshotUrl": "_assets/chatScreenshot.png",
         "descriptionHtml": {
           "de": "Wer braucht schon WhatsApp, Skype etc. wenn er auch seinen eigenen kleinen (verbuggten) Chat hat?",
           "en-us": "Who needs WhatsApp if one has my little Chat?"
@@ -44,7 +44,7 @@
       },
       {
         "url": "./timer",
-        "screenshotUrl": "src/assets/timerScreenshot.png",
+        "screenshotUrl": "_assets/timerScreenshot.png",
         "descriptionHtml": {
           "de": "Ein Timer zum Speedcuben. Nichts besonderes, aber sehr nützlich zum Festhalten der Zeiten, der Bestzeit, der eigenen Entwicklung etc.",
           "en-us": "A little timer for speedcubing. Nothing special but very useful for keeping track of solve-times, high-scores, development etc."
@@ -57,7 +57,7 @@
     "projects": [
       {
         "url": "./Sani",
-        "screenshotUrl": "src/assets/saniV2Screenshot.png",
+        "screenshotUrl": "_assets/saniV2Screenshot.png",
         "descriptionHtml": {
           "de": "Das Update des Sani-Projektes auf Version 2. Außerdem ist das mein erstes Projekt mit AngularJS.",
           "en-us": "Version 2 of the first aid project. First project with AngularJS"
@@ -65,7 +65,7 @@
       },
       {
         "url": "http://github.com/LBBO/CodeHighlighter",
-        "screenshotUrl": "src/assets/codehighlighterScreenshot.png",
+        "screenshotUrl": "_assets/codehighlighterScreenshot.png",
         "descriptionHtml": {
           "de": "Mein erstes Open-Source-Projekt, eine Bibliothek die Code auf Webseiten färben kann, wie aus Notepad++ gewohnt.",
           "en-us": "My first open-source project. It highlights code as seen in Notepad++"
@@ -73,7 +73,7 @@
       },
       {
         "url": "./TicTacToe",
-        "screenshotUrl": "src/assets/ticTacToeScreenshot.png",
+        "screenshotUrl": "_assets/ticTacToeScreenshot.png",
         "descriptionHtml": {
           "de": "Zocken ist wieder angesagt! Spiele gegen den Computer Tic Tac Toe und probiere auch im Hardcore-Modus zu gewinnen!",
           "en-us": "Games! More Games! Today it's Tic Tac Toe and you are most welcome to challenge the computer or a friend of yours"
@@ -81,7 +81,7 @@
       },
       {
         "url": "./Kaesekaestchen",
-        "screenshotUrl": "src/assets/kaesekaestchenScreenshot.png",
+        "screenshotUrl": "_assets/kaesekaestchenScreenshot.png",
         "descriptionHtml": {
           "de": "Das Zocken geht weiter, diesmal aber mit Käsekästchen. Spiele mit 2-4 Spielern auf einem 2-11 x 2-11 Kästchen großen Feld!",
           "en-us": "Same day as Tic Tac Toe, different game. This time it's Käsekästchen. You can play in a group of 2-4 players"
@@ -94,7 +94,7 @@
     "projects": [
       {
         "url": "./Sani/dev",
-        "screenshotUrl": "src/assets/saniV3Screenshot.png",
+        "screenshotUrl": "_assets/saniV3Screenshot.png",
         "descriptionHtml": {
           "de": "Version 3 <i>[beta]</i> des Sani-Projektes. Ein Freund hat mir riesige Hilfe mit dem neuen Design gegeben. Außerdem wurden neue Features hinzugefügt und der Code wurde stark aufgeräumt.",
           "en-us": "Version 3 <i>[beta]</i> of the first aid project. A friend gave me some great help with the new design and I added lots of new features."
@@ -102,7 +102,7 @@
       },
       {
         "url": "http://lbbo.de",
-        "screenshotUrl": "src/assets/lbboScreenshot.png",
+        "screenshotUrl": "_assets/lbboScreenshot.png",
         "descriptionHtml": {
           "de": "lbbo.de, mein eigener Link-Kürzer! Er bietet das erstellen von personalisierbaren Kurzlinks mit einstellbarem Ablaufdatum. Ich nutze ihn hauptsächlich zum Kürzen von Google-Docs-Links.",
           "en-us": "lbbo.de, my own link shortener! I use it mostly to shorten links Google Docs / Slides links down to a memorable link so that I don't need to memorize random codes. It offers custom links and expiration dates."
@@ -114,11 +114,11 @@
     "year": 2018,
     "projects": [
       {
-        "url": "./ultimate",
-        "screenshotUrl": "src/assets/ultimateTicTacToeScreenshot.png",
+        "url": "https://lbbo.github.io/ultimate-tic-tac-toe/",
+        "screenshotUrl": "_assets/ultimateTicTacToeScreenshot.png",
         "descriptionHtml": {
-          "de": "Nach langer Zeit kommt wieder ein Spiel: Ultimate Tic Tac Toe. Mein erstes Projekt mit React und das erste in der Liste, das <a href=\"https://github.com/LBBO/tic_tac_toe/tree/ultimate_tic_tac_toe\" target=\"_blank\">auf GitHub</a> zu finden ist.",
-          "en-us": "After quite a while there is finally a new game: ultimate tic tac toe! This is my first project with React and the first project in this list that can be found <a href=\"https://github.com/LBBO/tic_tac_toe/tree/ultimate_tic_tac_toe\" target=\"_blank\">on GitHub</a>!"
+          "de": "Nach langer Zeit kommt wieder ein Spiel: Ultimate Tic Tac Toe. Mein erstes Projekt mit React und das erste in der Liste, das <a href=\"https://github.com/LBBO/ultimate-tic-tac-toe\" target=\"_blank\">auf GitHub</a> zu finden ist.",
+          "en-us": "After quite a while there is finally a new game: ultimate tic tac toe! This is my first project with React and the first project in this list that can be found <a href=\"https://github.com/LBBO/ultimate-tic-tac-toe\" target=\"_blank\">on GitHub</a>!"
         }
       }
     ]
