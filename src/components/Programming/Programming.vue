@@ -13,19 +13,41 @@
         <div class="project-carousel">
           <header>
             <h2>
-              <span class="year-switcher prev-year">&#9664;</span>
+              <span
+                class="year-switcher prev-year"
+                @click="() => changeYear(-1)"
+              >
+                &#9664;
+              </span>
               <span class="title">
                         <span class="year">{{currentYear}}</span>
-                        <aside class="counter"></aside>
+                        <aside class="counter">
+                          {{currentProjectIndex + 1}} / {{numberOfProjectsThisYear}}
+                        </aside>
                     </span>
-              <span class="year-switcher next-year">&#9654;</span>
+              <span
+                class="year-switcher next-year"
+                @click="() => changeYear(1)"
+              >
+                &#9654;
+              </span>
             </h2>
           </header>
-          <a href="#" target="_blank">
+          <a :href="project.url" target="_blank">
             <div class="screenshots">
-              <span class="project-switcher prev-project">&#9664;</span>
+              <span
+                class="project-switcher prev-project"
+                @click="(e) => changeProject(-1, e)"
+              >
+                &#9664;
+              </span>
               <img :src="project.screenshotUrl" />
-              <span class="project-switcher next-project">&#9654;</span>
+              <span
+                class="project-switcher next-project"
+                @click="(e) => changeProject(1, e)"
+              >
+                &#9654;
+              </span>
             </div>
             <div :class="`description ${lang}`" v-html="project.descriptionHtml[lang]" />
           </a>
@@ -45,13 +67,52 @@
     props: {
       lang: String,
     },
-    data: () => {
-      const currentYearsProjects = projectsByYear[3]
-      const currentYear = currentYearsProjects.year
+    data: (): {
+      currentYearIndex: number,
+      currentProjectIndex: number,
+    } => {
       return {
-        currentYear,
-        project: currentYearsProjects.projects[0],
+        currentYearIndex: projectsByYear.length - 1,
+        currentProjectIndex: 0,
       }
+    },
+    methods: {
+      changeYear: function (delta: number) {
+        this.currentYearIndex = (
+          this.currentYearIndex + delta + projectsByYear.length
+        ) % projectsByYear.length
+        this.currentProjectIndex = 0
+      },
+      changeProject: function (delta: number, evt: Event) {
+        evt.stopPropagation()
+        const nextProjectIndex = this.currentProjectIndex + delta
+
+        if (nextProjectIndex < 0) {
+          this.changeYear(-1)
+          this.currentProjectIndex = this.numberOfProjectsThisYear - 1
+        } else if (nextProjectIndex >= this.numberOfProjectsThisYear) {
+          this.changeYear(1)
+          this.currentProjectIndex = 0
+        } else {
+          this.currentProjectIndex = nextProjectIndex
+        }
+      },
+    },
+    computed: {
+      currentYear: function (): number {
+        console.log(this.currentYearIndex, projectsByYear, projectsByYear[this.currentYearIndex])
+        return projectsByYear[this.currentYearIndex].year
+      },
+      project: function (): {
+        descriptionHtml: { [k: string]: string },
+        screenshotUrl: string,
+        url: string,
+      } {
+        return projectsByYear[this.currentYearIndex].projects[this.currentProjectIndex]
+      },
+      numberOfProjectsThisYear: function (): number {
+        return projectsByYear[this.currentYearIndex].projects.length
+      },
     },
   }
 </script>
@@ -72,7 +133,6 @@
       }
     }
   }
-
 </style>
 
 <style scoped lang="scss">
