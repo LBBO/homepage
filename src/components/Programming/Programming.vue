@@ -60,6 +60,7 @@
 <script lang="ts">
   import Knowledge from './Knowledge.vue'
   import projectsByYear from './projects.json'
+  import { clearSelection } from '../../util'
 
   export default {
     name: 'Programming',
@@ -78,6 +79,8 @@
     },
     methods: {
       changeYear: function (delta: number) {
+        clearSelection()
+
         this.currentYearIndex = (
           this.currentYearIndex + delta + projectsByYear.length
         ) % projectsByYear.length
@@ -85,6 +88,8 @@
       },
       changeProject: function (delta: number, evt: Event) {
         evt.stopPropagation()
+        clearSelection()
+
         const nextProjectIndex = this.currentProjectIndex + delta
 
         if (nextProjectIndex < 0) {
