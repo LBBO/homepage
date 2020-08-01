@@ -106,7 +106,6 @@
     },
     computed: {
       currentYear: function (): number {
-        console.log(this.currentYearIndex, projectsByYear, projectsByYear[this.currentYearIndex])
         return projectsByYear[this.currentYearIndex].year
       },
       project: function (): {
@@ -200,6 +199,7 @@
                 aside {
                   font-size: medium;
                   font-weight: normal;
+                  text-align: center;
                 }
               }
             }
