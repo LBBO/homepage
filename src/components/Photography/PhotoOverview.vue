@@ -7,7 +7,7 @@
     >
       <div
         class="child"
-        :style="`background-image: url(_assets/previews/${picture})`"
+        :style="`background-image: url(${getImagePath(picture, true)})`"
       />
     </div>
   </div>
@@ -25,7 +25,7 @@
     </div>
     <div
       class="img"
-      :style="`background-image: url(_assets/${currentImage})`"
+      :style="`background-image: url(${getImagePath(currentImage)})`"
     />
     <div
       class="img-switcher next"
@@ -41,6 +41,7 @@
 </template>
 
 <script lang="ts">
+  import { clearSelection, pathToAssets } from '../../util'
   import pictureFileNames from './pictureFileNames.json'
 
   export default {
@@ -58,6 +59,9 @@
       },
     },
     methods: {
+      getImagePath(fileName: string, getPreview = false): string {
+        return `${pathToAssets()}${getPreview ? 'previews/' : ''}${fileName}`
+      },
       openImage: function (imageIndex: number) {
         this.showOverlay = true
         this.currentImageIndex = imageIndex
@@ -85,7 +89,7 @@
       },
       registerKeyPress() {
         document.addEventListener('keydown', this.onKeyPress)
-      }
+      },
     },
     beforeUnmount() {
       document.removeEventListener('keydown', this.onKeyPress)

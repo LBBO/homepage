@@ -41,7 +41,7 @@
               >
                 &#9664;
               </span>
-              <img :src="project.screenshotUrl" />
+              <img :src="screenshotUrl" />
               <span
                 class="project-switcher next-project"
                 @click="(e) => changeProject(1, e)"
@@ -60,7 +60,7 @@
 <script lang="ts">
   import Knowledge from './Knowledge.vue'
   import projectsByYear from './projects.json'
-  import { clearSelection } from '../../util'
+  import { clearSelection, pathToAssets } from '../../util'
 
   export default {
     name: 'Programming',
@@ -110,13 +110,16 @@
       },
       project: function (): {
         descriptionHtml: { [k: string]: string },
-        screenshotUrl: string,
+        screenshotFileName: string,
         url: string,
       } {
         return projectsByYear[this.currentYearIndex].projects[this.currentProjectIndex]
       },
       numberOfProjectsThisYear: function (): number {
         return projectsByYear[this.currentYearIndex].projects.length
+      },
+      screenshotUrl() {
+        return pathToAssets() + this.project.screenshotFileName
       },
     },
   }
