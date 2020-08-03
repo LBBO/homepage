@@ -15,12 +15,13 @@
 </template>
 
 <script>
+  import { defineComponent } from 'vue'
   import PhotoOverview from './PhotoOverview.vue'
 
-  export default {
+  export default defineComponent({
     name: "Photography",
     components: { PhotoOverview },
-  }
+  })
 </script>
 
 <style scoped lang="scss">

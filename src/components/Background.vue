@@ -6,14 +6,15 @@
 </template>
 
 <script>
-  export default {
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
     name: "Background",
-  }
+  })
 </script>
 
 <style scoped lang="scss">
   .background {
-    //todo: eigene bilder nehmen
     .img {
       background: url('../assets/IMG_3271.jpg') no-repeat 50% 50%;
       width: 100%;

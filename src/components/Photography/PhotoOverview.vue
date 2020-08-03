@@ -41,10 +41,11 @@
 </template>
 
 <script lang="ts">
+  import { defineComponent } from 'vue'
   import { clearSelection, pathToAssets } from '../../util'
   import pictureFileNames from './pictureFileNames.json'
 
-  export default {
+  export default defineComponent({
     name: 'PhotoOverview',
     data: () => (
       {
@@ -54,7 +55,7 @@
       }
     ),
     computed: {
-      currentImage: function (): string {
+      currentImage(): string {
         return this.pictureFileNames[this.currentImageIndex]
       },
     },
@@ -62,17 +63,17 @@
       getImagePath(fileName: string, getPreview = false): string {
         return `${pathToAssets()}${getPreview ? 'previews/' : ''}${fileName}`
       },
-      openImage: function (imageIndex: number) {
+      openImage(imageIndex: number) {
         this.showOverlay = true
         this.currentImageIndex = imageIndex
         this.registerKeyPress()
       },
-      closeImage: function () {
+      closeImage() {
         this.showOverlay = false
         this.currentImageIndex = NaN
         this.registerKeyPress()
       },
-      changeImage: function (delta: number) {
+      changeImage(delta: number) {
         this.currentImageIndex = (
           this.currentImageIndex + delta + this.pictureFileNames.length
         ) % this.pictureFileNames.length
@@ -94,7 +95,7 @@
     beforeUnmount() {
       document.removeEventListener('keydown', this.onKeyPress)
     },
-  }
+  })
 </script>
 
 <style scoped lang="scss">

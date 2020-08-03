@@ -21,14 +21,16 @@
 </template>
 
 <script lang="ts">
-  export default {
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
     name: 'Footer',
     data: () => (
       {
         email: ['mailto', ':', 'mdk', '@', 'kuckuk', '.', 'com'].join(''),
       }
     ),
-  }
+  })
 </script>
 
 <style scoped lang="scss">
