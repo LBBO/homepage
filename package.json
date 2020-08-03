@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node ./copyImages.js"
+    "build": "vite build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",

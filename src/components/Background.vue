@@ -16,7 +16,7 @@
 <style scoped lang="scss">
   .background {
     .img {
-      background: url('../assets/IMG_3271.jpg') no-repeat 50% 50%;
+      background: url('/img/IMG_3271.jpg') no-repeat 50% 50%;
       width: 100%;
       height: 100%;
       position: fixed;

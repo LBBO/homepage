@@ -16,8 +16,8 @@ export const clearSelection = () => {
 
 export const pathToAssets = (): string => {
   const isDev = window.process?.env?.NODE_ENV === 'development'
-  const prodPath = '_assets/'
-  const devPath = 'src/assets/'
+  const prodPath = '/img/'
+  const devPath = '/img/'
 
   return isDev ? devPath : prodPath
 }

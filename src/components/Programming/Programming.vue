@@ -58,10 +58,10 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-  import Knowledge from './Knowledge.vue'
-  import projectsByYear from './projects.json'
-  import { clearSelection, pathToAssets } from '../../util'
+import { defineComponent } from 'vue'
+import Knowledge from './Knowledge.vue'
+import projectsByYear from './projects.json'
+import { clearSelection, pathToAssets } from '../../util'
 
   export default defineComponent({
     name: 'Programming',
@@ -94,36 +94,36 @@
 
         const nextProjectIndex = this.currentProjectIndex + delta
 
-        if (nextProjectIndex < 0) {
-          this.changeYear(-1)
-          this.currentProjectIndex = this.numberOfProjectsThisYear - 1
-        } else if (nextProjectIndex >= this.numberOfProjectsThisYear) {
-          this.changeYear(1)
-          this.currentProjectIndex = 0
-        } else {
-          this.currentProjectIndex = nextProjectIndex
-        }
-      },
+      if (nextProjectIndex < 0) {
+        this.changeYear(-1)
+        this.currentProjectIndex = this.numberOfProjectsThisYear - 1
+      } else if (nextProjectIndex >= this.numberOfProjectsThisYear) {
+        this.changeYear(1)
+        this.currentProjectIndex = 0
+      } else {
+        this.currentProjectIndex = nextProjectIndex
+      }
     },
-    computed: {
-      currentYear(): number {
-        return projectsByYear[this.currentYearIndex].year
-      },
-      project(): {
-        screenshotFileName: string,
-        url: string,
-        descriptionHtml: { [k: string]: string },
-      } {
-        return projectsByYear[this.currentYearIndex].projects[this.currentProjectIndex]
-      },
-      numberOfProjectsThisYear(): number {
-        return projectsByYear[this.currentYearIndex].projects.length
-      },
-      screenshotUrl(): string {
-        return pathToAssets() + this.project.screenshotFileName
-      },
+  },
+  computed: {
+    currentYear(): number {
+      return projectsByYear[this.currentYearIndex].year
     },
-  })
+    project(): {
+      screenshotFileName: string,
+      url: string,
+      descriptionHtml: { [k: string]: string },
+    } {
+      return projectsByYear[this.currentYearIndex].projects[this.currentProjectIndex]
+    },
+    numberOfProjectsThisYear(): number {
+      return projectsByYear[this.currentYearIndex].projects.length
+    },
+    screenshotUrl(): string {
+      return pathToAssets() + this.project.screenshotFileName
+    },
+  },
+})
 </script>
 
 <style lang="scss">
