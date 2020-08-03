@@ -3,7 +3,7 @@
     <input
       type="checkbox"
       id="language"
-      v-bind:checked="isChecked"
+      :checked="isChecked"
       @input="$emit('input', $event?.target?.checked ? 'de' : 'en-us')"
       @input.stop="stopPropagation"
     />
@@ -12,7 +12,9 @@
 </template>
 
 <script lang="ts">
-  export default {
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
     name: 'LanguageSwitch',
     props: {
       value: String,
@@ -21,15 +23,11 @@
       isChecked: function (): boolean {
         return this.$props.value === 'de'
       },
-      lang: function (): 'de' | 'en-us' {
-        return this.checked ? 'de' : 'en-us'
-      }
     },
     methods: {
       stopPropagation: (event: Event) => event.stopPropagation(),
     },
-  }
-
+  })
 </script>
 
 <style scoped lang="scss">

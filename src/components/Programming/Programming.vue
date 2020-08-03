@@ -20,11 +20,11 @@
                 &#9664;
               </span>
               <span class="title">
-                        <span class="year">{{currentYear}}</span>
-                        <aside class="counter">
-                          {{currentProjectIndex + 1}} / {{numberOfProjectsThisYear}}
-                        </aside>
-                    </span>
+                  <span class="year">{{currentYear}}</span>
+                  <aside class="counter">
+                    {{currentProjectIndex + 1}} / {{numberOfProjectsThisYear}}
+                  </aside>
+              </span>
               <span
                 class="year-switcher next-year"
                 @click="() => changeYear(1)"
@@ -41,7 +41,7 @@
               >
                 &#9664;
               </span>
-              <img :src="project.screenshotUrl" />
+              <img :src="screenshotUrl" />
               <span
                 class="project-switcher next-project"
                 @click="(e) => changeProject(1, e)"
@@ -58,27 +58,28 @@
 </template>
 
 <script lang="ts">
+  import { defineComponent } from 'vue'
   import Knowledge from './Knowledge.vue'
   import projectsByYear from './projects.json'
-  import { clearSelection } from '../../util'
+  import { clearSelection, pathToAssets } from '../../util'
 
-  export default {
+  export default defineComponent({
     name: 'Programming',
     components: { Knowledge },
     props: {
       lang: String,
     },
-    data: (): {
+    data(): {
       currentYearIndex: number,
       currentProjectIndex: number,
-    } => {
+    } {
       return {
         currentYearIndex: projectsByYear.length - 1,
         currentProjectIndex: 0,
       }
     },
     methods: {
-      changeYear: function (delta: number) {
+      changeYear(delta: number) {
         clearSelection()
 
         this.currentYearIndex = (
@@ -86,7 +87,7 @@
         ) % projectsByYear.length
         this.currentProjectIndex = 0
       },
-      changeProject: function (delta: number, evt: Event) {
+      changeProject(delta: number, evt: Event) {
         evt.stopPropagation()
         evt.preventDefault()
         clearSelection()
@@ -105,21 +106,24 @@
       },
     },
     computed: {
-      currentYear: function (): number {
+      currentYear(): number {
         return projectsByYear[this.currentYearIndex].year
       },
-      project: function (): {
-        descriptionHtml: { [k: string]: string },
-        screenshotUrl: string,
+      project(): {
+        screenshotFileName: string,
         url: string,
+        descriptionHtml: { [k: string]: string },
       } {
         return projectsByYear[this.currentYearIndex].projects[this.currentProjectIndex]
       },
-      numberOfProjectsThisYear: function (): number {
+      numberOfProjectsThisYear(): number {
         return projectsByYear[this.currentYearIndex].projects.length
       },
+      screenshotUrl(): string {
+        return pathToAssets() + this.project.screenshotFileName
+      },
     },
-  }
+  })
 </script>
 
 <style lang="scss">

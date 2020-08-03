@@ -13,3 +13,11 @@ export const clearSelection = () => {
     }
   }
 }
+
+export const pathToAssets = (): string => {
+  const isDev = window.process?.env?.NODE_ENV === 'development'
+  const prodPath = '_assets/'
+  const devPath = 'src/assets/'
+
+  return isDev ? devPath : prodPath
+}

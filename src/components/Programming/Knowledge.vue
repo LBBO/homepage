@@ -80,9 +80,11 @@
 </template>
 
 <script lang="ts">
-  export default {
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
     name: 'Knowledge',
-  }
+  })
 </script>
 
 <style scoped lang="scss">

@@ -7,7 +7,7 @@
     >
       <div
         class="child"
-        :style="`background-image: url(src/assets/previews/${picture})`"
+        :style="`background-image: url(${getImagePath(picture, true)})`"
       />
     </div>
   </div>
@@ -25,7 +25,7 @@
     </div>
     <div
       class="img"
-      :style="`background-image: url(src/assets/${currentImage})`"
+      :style="`background-image: url(${getImagePath(currentImage)})`"
     />
     <div
       class="img-switcher next"
@@ -41,37 +41,39 @@
 </template>
 
 <script lang="ts">
-  import { clearSelection } from '../../util'
+  import { defineComponent } from 'vue'
+  import { clearSelection, pathToAssets } from '../../util'
+  import pictureFileNames from './pictureFileNames.json'
 
-  export default {
+  export default defineComponent({
     name: 'PhotoOverview',
     data: () => (
       {
         showOverlay: false,
         currentImageIndex: NaN,
-        pictureFileNames: [
-          'IMG_0571-2.jpg', 'IMG_0961.jpg', 'IMG_1360.jpg', 'IMG_1551.jpg', 'IMG_1556.jpg', 'IMG_1650-1.jpg',
-          'IMG_2255.jpg', 'IMG_2566.jpg', 'IMG_2889.jpg',
-        ],
+        pictureFileNames,
       }
     ),
     computed: {
-      currentImage: function (): string {
+      currentImage(): string {
         return this.pictureFileNames[this.currentImageIndex]
       },
     },
     methods: {
-      openImage: function (imageIndex: number) {
+      getImagePath(fileName: string, getPreview = false): string {
+        return `${pathToAssets()}${getPreview ? 'previews/' : ''}${fileName}`
+      },
+      openImage(imageIndex: number) {
         this.showOverlay = true
         this.currentImageIndex = imageIndex
         this.registerKeyPress()
       },
-      closeImage: function () {
+      closeImage() {
         this.showOverlay = false
         this.currentImageIndex = NaN
         this.registerKeyPress()
       },
-      changeImage: function (delta: number) {
+      changeImage(delta: number) {
         this.currentImageIndex = (
           this.currentImageIndex + delta + this.pictureFileNames.length
         ) % this.pictureFileNames.length
@@ -88,12 +90,12 @@
       },
       registerKeyPress() {
         document.addEventListener('keydown', this.onKeyPress)
-      }
+      },
     },
     beforeUnmount() {
       document.removeEventListener('keydown', this.onKeyPress)
     },
-  }
+  })
 </script>
 
 <style scoped lang="scss">
