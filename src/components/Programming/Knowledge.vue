@@ -41,6 +41,18 @@
       </li>
       <li>
         <a
+          href="https://v3.vuejs.org/"
+          target="_blank"
+        >
+          <img
+            src="../../assets/vue.svg"
+            title="Vue 3"
+            alt="Vue 3"
+          />
+        </a>
+      </li>
+      <li>
+        <a
           href="https://www.npmjs.com/"
           target="_blank"
         >
