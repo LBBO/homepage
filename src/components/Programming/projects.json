@@ -120,6 +120,35 @@
           "de": "Nach langer Zeit kommt wieder ein Spiel: Ultimate Tic Tac Toe. Mein erstes Projekt mit React und das erste in der Liste, das <a href=\"https://github.com/LBBO/ultimate-tic-tac-toe\" target=\"_blank\">auf GitHub</a> zu finden ist.",
           "en-us": "After quite a while there is finally a new game: ultimate tic tac toe! This is my first project with React and the first project in this list that can be found <a href=\"https://github.com/LBBO/ultimate-tic-tac-toe\" target=\"_blank\">on GitHub</a>!"
         }
+      },
+      {
+        "url": "http://michaelkuckuk.com/pixelbiene",
+        "screenshotFileName": "pixelbiene.png",
+        "descriptionHtml": {
+          "de": "Nachdem ich <a href=\"https://www.youtube.com/watch?v=WMnFDg2wlbQ&ab_channel=DirtyWhitePaint\" target=\"_blank\">dieses grandiose Video</a> gesehen habe, wollte ich unbedingt das Spiel spielen. Da es es aber nicht gab, sah ich mich gezwungen, mich selber dran zu setzen ¯\\_(ツ)_/¯. Hier habe ich meine ersten richtigen Erfahrungen mit dem HTML Canvas gemacht; in diesem Fall zusammen mit p5.js.",
+          "en-us": "After watching <a href=\"https://www.youtube.com/watch?v=WMnFDg2wlbQ&ab_channel=DirtyWhitePaint\" target=\"_blank\">this awesome video</a>, I really wanted to play that game. Since it didn't exist, however, I saw myself forced to take matters into my own hands ¯\\_(ツ)_/¯. This was my first real experience with the HTML canvas; in this case, using p5.js"
+        }
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "projects": [
+      {
+        "url": "https://github.com/LBBO/stream-together/",
+        "screenshotFileName": "stream-together.png",
+        "descriptionHtml": {
+          "de": "Wie viele in diesem traurigen Jahr, habe ich von jetzt auf gleich sehr oft mit Freunden per Videochat Filme, Serien und sonstige Videos geschaut. Und da das ständige \"Drei, zwei, eins, jetzt!\" irgendwann genervt hat, habe ich irgendwann ein Plugin entwickelt, was mir uns automatisch alle synchronisiert.",
+          "en-us": "As many others, I found myself frequently watching movies, TV shows, and other videos with friends via video chat in this tragic year. And since the constant \"Three, two, one, go!\" became annoying, I just decided to write a browser plugin to synchronize our video players automatically."
+        }
+      },
+      {
+        "url": "http://chaostrub.de/",
+        "screenshotFileName": "chaostrub.png",
+        "descriptionHtml": {
+          "de": "Wo ich schon dabei war, mit Vue herumzuspielen, habe ich noch gleich die Webseite des ChaosTRUBs - der Theatergruppe, die ich mitgegründet habe - erweitert. Dort findet man auch Videos unserer Stücke!",
+          "en-us": "While I was messing around with Vue, I decided to improve the website for the ChaosTRUB (the theater group I co-founded). You can also find (German) videos of our plays there!"
+        }
       }
     ]
   }

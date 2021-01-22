@@ -137,6 +137,12 @@
               color: inherit;
               text-decoration: none;
             }
+
+            em {
+              font-weight: bold;
+              font-style: normal;
+              font-size: 1.2em;
+            }
           }
         }
       }
@@ -237,6 +243,7 @@
               border-radius: 100%;
               width: 21px;
               text-align: center;
+              cursor: pointer;
 
               &.disabled {
                 cursor: default;
