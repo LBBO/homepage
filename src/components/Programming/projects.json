@@ -135,6 +135,13 @@
     "year": 2020,
     "projects": [
       {
+        "screenshotFileName": "oscar.png",
+        "descriptionHtml": {
+          "de": "Im Rahmen meines Studienprojektes habe ich zusammen mit 5 Kommilitonen eine Webapp zur Steuerung von Oszilloskopen für die Untersuchung von Seitenkanalangriffen entwickelt (Projekt <em>Osc</em>illoscopes <em>a</em>t <em>R</em>UB). Hier habe ich Vue 3 und GitLab's CI genauer kennengelernt. Selbstredend ist das Projekt nicht öffentlich zugänglich, weshalb dieser Screenshot reichen muss.",
+          "en-us": "As my study project, I built a web app together with 5 other students that controls oscilloscopes in order to analyze side channel attacks (project <em>Osc</em>illoscopes <em>a</em>t <em>R</em>UB). During this project, I learned a lot about Vue 3 and GitLab's CI. Of course, the project isn't publicly accessible, so this screenshot will have to be enough."
+        }
+      },
+      {
         "url": "https://github.com/LBBO/stream-together/",
         "screenshotFileName": "stream-together.png",
         "descriptionHtml": {
